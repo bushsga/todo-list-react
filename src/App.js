@@ -13,7 +13,7 @@ const addTodo = (newTodo) => {
 
 const deleteTodo = (index) => {
   setTodos(todos.filter((todo, i) => i !== index));
-}
+};
   return (
     <div className='h-screen bg-gray-100'>
       <div className='max-w-md mx-auto p-4'>

@@ -4,10 +4,14 @@ const TodoForm = ({ addTodo }) => {
     const [newTodo, setNewTodo] = useState('');
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+      e.preventDefault();
+      if (newTodo !== '') {
         addTodo(newTodo);
         setNewTodo('');
+      }
     };
+
+    
   return (
     <div>
       <form onSubmit={handleSubmit} className='flex items-center p-4'>
@@ -15,7 +19,7 @@ const TodoForm = ({ addTodo }) => {
           <button type='submit' className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded'>Add Todo</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default TodoForm
